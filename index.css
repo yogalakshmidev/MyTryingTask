@@ -1,34 +1,16 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Rowdies:wght@300;400;700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
   margin: 0;
   padding: 0;
-  background-color: black;
+  
 }
-body{
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: salmon;
   height: 100vh;
   overflow: hidden;
-}
-span{
-  background: url("https://cdn4.iconfinder.com/data/icons/small-n-flat/24/heart-512.png");
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  pointer-events: none;
-  background-size: cover;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  animation: animate 6s linear;
-}
-
-@keyframes animate{
-  0%{
-    transform: translate(-50%,-50%);
-    opacity: 1;
-    filter: hue-rotate(0);
-  }
-  100%{
-    transform: translate(-50%,-5000%);
-    opacity: 0;
-    filter: hue-rotate(750deg);
-  }
+  font-family: "Saira", serif;
 }

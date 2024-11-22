@@ -1,18 +1,25 @@
-const bodyE1 = document.querySelector("body");
+const containerE1 = document.querySelector(".container");
+const careers = ["Youtube","Web Developer","FreeLancer","Instructor"];
+let careerIndex = 0;
+let characterIndex = 0;
+function updateText(){
+  characterIndex++;
+  containerE1.innerHTML=`
+  <h1>I am ${careers[careerIndex].slice(0,1) === "I" ? "an" : "a"} ${careers[careerIndex].slice(0,characterIndex)}</h1>
+ `
+ 
+ if(characterIndex === careers[careerIndex].length){
+  careerIndex++;
+  characterIndex = 0;
+ }
 
-bodyE1.addEventListener("mousemove",(event) => {
-  
-  
-const xPos = event.offsetX;
-const yPos = event.offsetY;
-const spanE1 = document.createElement("span");
-spanE1.style.left = xPos + "px";
-spanE1.style.top = yPos + "px";
-const size = Math.random() * 100;
-spanE1.style.width = size + "px";
-spanE1.style.height = size + "px";
-bodyE1.appendChild(spanE1);
-setTimeout(()=>{
-  spanE1.remove();
-},3000)
-});
+ if(careerIndex === careers.length){
+  careerIndex = 0;
+ }
+ setTimeout(updateText,400);
+ 
+}
+
+updateText();
+
+
