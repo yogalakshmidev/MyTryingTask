@@ -1,42 +1,40 @@
-body{
+body {
   margin: 0;
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Times New Roman', Times, serif;
-  background-color: slateblue;
+  background-color: aliceblue;
+  font-family: sans-serif;
 }
 
-.calender-container{
-  background-color: white;
-  width: 300px;
-  text-align: center;
-  border-radius: 10px;
-  overflow: hidden;
+.btn {
+  background-color: pink;
+  padding: 20px 40px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
-.month-name{
-  margin: 0;
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+.btn::before {
+  content: "";
+  position: absolute;
   background-color: orangered;
-  color: white;
-  padding: 10px;
-  font-size: 30px;
-  font-weight: bold;
+  width: 0;
+  height: 0;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.5s height 0.5s;
 }
-.day-name{
-  font-size: 20px;
-  color: darkgray;
-
-}
-.day-number{
-  font-size: 80px;
-  margin: 0;
-  font-weight: bold;
-}
-.year{
-  margin: 20px 0;
-  font-size: 20px;
-  color: darkgray;
-  font-weight: 500;
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
