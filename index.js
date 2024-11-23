@@ -1,25 +1,16 @@
-const containerE1 = document.querySelector(".container");
-const careers = ["Youtube","Web Developer","FreeLancer","Instructor"];
-let careerIndex = 0;
-let characterIndex = 0;
-function updateText(){
-  characterIndex++;
-  containerE1.innerHTML=`
-  <h1>I am ${careers[careerIndex].slice(0,1) === "I" ? "an" : "a"} ${careers[careerIndex].slice(0,characterIndex)}</h1>
- `
- 
- if(characterIndex === careers[careerIndex].length){
-  careerIndex++;
-  characterIndex = 0;
- }
+const monthNameE1 = document.getElementById("month-name");
+const dayNameE1 = document.getElementById("day-name");
+const dayNumberE1 = document.getElementById("day-number");
+const yearE1 =  document.getElementById("year");
+const date = new Date();
+console.log(date.getDate());
 
- if(careerIndex === careers.length){
-  careerIndex = 0;
- }
- setTimeout(updateText,400);
- 
-}
-
-updateText();
-
-
+const month = date.getMonth();
+monthNameE1.innerHTML = date.toLocaleString("en",{
+  month:"long"
+})
+dayNameE1.innerText = date.toLocaleString("en",{
+  weekday:"long"
+})
+dayNumberE1.innerText = date.getDate();
+yearE1.innerText = date.getFullYear();

@@ -1,1 +1,2 @@
-HTML --Auto Text Effect Animation
+Project 3:
+Mini Calender 

@@ -1,16 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Rowdies:wght@300;400;700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
-
-* {
+body{
   margin: 0;
-  padding: 0;
-  
-}
-body {
-  display: flex;
+  display: flex;  
   justify-content: center;
   align-items: center;
-  background-color: salmon;
   height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: slateblue;
+}
+
+.calender-container{
+  background-color: white;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
   overflow: hidden;
-  font-family: "Saira", serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.month-name{
+  margin: 0;
+  background-color: orangered;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.day-name{
+  font-size: 20px;
+  color: darkgray;
+
+}
+.day-number{
+  font-size: 80px;
+  margin: 0;
+  font-weight: bold;
+}
+.year{
+  margin: 20px 0;
+  font-size: 20px;
+  color: darkgray;
+  font-weight: 500;
 }
