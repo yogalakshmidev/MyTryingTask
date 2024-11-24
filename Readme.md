@@ -1,1 +1,2 @@
-Testimonial Slider 
+Realtime Character Counter...
+Eg: used to count the no. of characters that are typed in the textarea
