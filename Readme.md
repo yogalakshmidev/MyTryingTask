@@ -1,2 +1,2 @@
-Realtime Character Counter...
-Eg: used to count the no. of characters that are typed in the textarea
+Digital Clock Display..
+In this the time is displayed on the screen using Js
