@@ -1,18 +1,14 @@
-Digital Clock Display..
-In this the time is displayed on the screen using Js
+Double Landing Page
 
- let h= new Date().getHours();
-  let m= new Date().getMinutes();
-  let s = new Date().getSeconds();
+just overview of the two tabs in a single page .. while hovering .. the size of one tab is bigger than the other one with some effects
 
+
+other event listener classes are
+ mouseenter
+ mouseleave
+
+ To add the class dynamically use
   
-  h =  h <10 ? "0"+h : h;
-  m =  m <10 ? "0"+m : m;
-  s =  s <10 ? "0"+s : s;
+  container.classList.add("active-left");
 
-  setTimeout(()=>{
-updateClock();
-  },1000)
-    }  
-
- updateClock();
+  transition:  width 2s ease-in-out; to animate the particular width
