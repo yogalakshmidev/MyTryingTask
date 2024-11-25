@@ -2,4 +2,61 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1643509324658-a75c1e05f261?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG5hdHVyYWwlMjBiYWNrZ3JvdW5kfGVufDB8MHwwfHx8MA%3D%3D");
+  background-size: cover;
+
+}
+
+h2{
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  font-size: 14px;
+  text-align: center;
+  color: darkblue;
+  margin: 20px;
+}
+.clock{
+  display: flex;
+}
+.clock div{
+  margin: 5px;
+  position: relative;
+}
+.clock span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100px;
+  height: 80px;
+  background: slateblue;
+  opacity: 0.8;
+  color: white;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+}
+.clock .text{
+  height: 50px;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: darkblue;
+  opacity: 0.8;
+
+}
+.clock #ampm{
+  background-color: green;
+  width: 50px;
+  height: 20px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
 }
