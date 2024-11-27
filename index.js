@@ -1,36 +1,35 @@
-const containerE1= document.querySelector(".container");
-for (let index = 0; index < 30  ; index++) {
-  const colorContainerE1 = document.createElement("div");
-  colorContainerE1.classList.add("color-container");
-  containerE1.appendChild(colorContainerE1);
-  
-}
+const imageContainerE1=  document.querySelector(".image-container");
+const prevE1= document.getElementById("prev");
+const nextE1 = document.getElementById("next");
 
-const colorContainerE1s= document.querySelectorAll(".color-container");
+let x=0;
+let timer;
+prevE1.addEventListener("click",()=>{
+x = x + 45;
+// clearTimeout(timer);
+console.log("x value in previous button is X",+x );
+updateGallery();
+});
 
-generateColors();
-function generateColors(){
-  colorContainerE1s.forEach((colorContainerE1)=>{
-    const newColorCode = randomColor();
-    colorContainerE1.style.backgroundColor += "#"+newColorCode;
-    colorContainerE1.innerHTML="#"+newColorCode;
+nextE1.addEventListener("click",()=>{
+  x = x - 45;
+  clearTimeout(timer);
+  console.log("x value in next button is X"+x );
+  updateGallery();
   });
+function updateGallery1(){
+imageContainerE1.style.transform = `perspective(1000px) rotateY(${x}deg)`;
+
+timer = setTimeout(()=>{
+ x = x - 45;
+updateGallery1();
+},3000)
+}
+
+function updateGallery(){
+  imageContainerE1.style.transform = `perspective(1000px) rotateY(${x}deg)`;
 
 }
 
-function randomColor()
-{
-  const chars="0123456789abcdef"
-  const colorCodeLength=6; 
+updateGallery1();
 
-  let colorCode="";
-  for (let index = 0; index < colorCodeLength; index++) 
-    {
-    const randomNum = Math.floor(Math.random()*chars.length);
-    colorCode += chars.substring(randomNum, randomNum + 1);
-   }
-     
-   return colorCode; 
-
-    
-  }
