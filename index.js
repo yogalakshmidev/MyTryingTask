@@ -1,18 +1,35 @@
-const containerE1 = document.querySelector(".container");
-const leftE1 = document.querySelector(".left");
-const rightE1 = document.querySelector(".right");
-leftE1.addEventListener("mouseenter",() =>{
-  containerE1.classList.add("active-left");
-});
+const containerE1= document.querySelector(".container");
+for (let index = 0; index < 30  ; index++) {
+  const colorContainerE1 = document.createElement("div");
+  colorContainerE1.classList.add("color-container");
+  containerE1.appendChild(colorContainerE1);
+  
+}
 
-leftE1.addEventListener("mouseleave",()=>{
-  containerE1.classList.remove("active-left");
-});
+const colorContainerE1s= document.querySelectorAll(".color-container");
 
-rightE1.addEventListener("mouseenter",() =>{
-  containerE1.classList.add("active-right");
-});
+generateColors();
+function generateColors(){
+  colorContainerE1s.forEach((colorContainerE1)=>{
+    const newColorCode = randomColor();
+    colorContainerE1.style.backgroundColor += "#"+newColorCode;
+  });
 
-rightE1.addEventListener("mouseleave",() =>{
-  containerE1.classList.remove("active-right");
-});
+}
+
+function randomColor()
+{
+  const chars="0123456789abcdef"
+  const colorCodeLength=6; 
+
+  let colorCode="";
+  for (let index = 0; index < colorCodeLength; index++) 
+    {
+    const randomNum = Math.floor(Math.random()*chars.length);
+    colorCode += chars.substring(randomNum, randomNum + 1);
+   }
+     
+   return colorCode; 
+
+    
+  }
