@@ -1,8 +1,9 @@
-Rotating Image Gallery....
-In this there are list of images that are rotating the images by clicking the button
+Animated Search Bar...
+In this when we open the website only the search icon is present .. By clicking it ,, the search bar is open with its icon.
 
+For animation effect: transition: width .4s;
+  transition-delay: 1s;
 
- transform: perspective(1000px) rotateY(0deg); used for rotating the images in the y axis
-  transition: transform 0.75s;  used to show the transition effect
+  For Toggling effect:
 
-  In this we use x as a variable which used to rotate the image by increasing 45deg
+  searchBarContainerE1.classList.toggle("active");
